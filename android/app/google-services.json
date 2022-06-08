@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "668340871932",
+    "project_id": "map-for-all-192bf",
+    "storage_bucket": "map-for-all-192bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668340871932:android:5c18871cea49ea4db82d79",
+        "android_client_info": {
+          "package_name": "com.mapforall"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "668340871932-p4a8sj94to06okbmreunmhutdbhe78b0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mapforall",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "668340871932-b6p94logjta7i1p30c1qpnqugck1k5t6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCps-_v91d8DUGGBEpaThdFSNtvtKNR4M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "668340871932-b6p94logjta7i1p30c1qpnqugck1k5t6.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "668340871932-uhgcao8jk6neaimgonuffi21g8ju4k7f.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mapforall"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

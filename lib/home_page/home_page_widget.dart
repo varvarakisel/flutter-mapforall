@@ -1,5 +1,4 @@
 import 'package:map_for_all/index.dart';
-
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_util.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
@@ -47,12 +46,13 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(0, 0, 10, 150),
                       child: IconButton(
+                        //TODO: learn how to make TextToSpeach read this button as 'Settings', not just a button
                         color: Colors.transparent,
                         splashRadius: 30,
                         iconSize: 45,
                         icon: Icon(
                           Icons.clear_all_outlined,
-                          color: Colors.black,
+                          color: FlutterFlowTheme.of(context).primaryBtnText,
                           size: 30,
                         ),
                         onPressed: () {
@@ -153,20 +153,24 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                                   .secondaryColor,
                                           prefixIcon: Icon(
                                             Icons.search,
-                                            color: Color(0xFF062C09),
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryBtnText,
                                           ),
                                           suffixIcon: Icon(
                                             Icons.arrow_forward,
-                                            color: Color(0xFF062C09),
+                                            color: FlutterFlowTheme.of(context)
+                                                .primaryBtnText,
                                             size: 22,
                                           ),
                                         ),
                                         style: FlutterFlowTheme.of(context)
-                                            .bodyText1
+                                            .bodyText2
                                             .override(
                                               fontFamily: 'Poppins',
-                                              color: Color(0xFF062C09),
-                                              fontWeight: FontWeight.normal,
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              fontWeight: FontWeight.w600,
                                             ),
                                         textAlign: TextAlign.start,
                                         maxLines: 1,
@@ -183,6 +187,7 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                                       ),
                                     ),
                                     ListView(
+                                      //TODO: 'list view' change to 'grid view' or just 3-4 rows
                                       padding: EdgeInsets.zero,
                                       scrollDirection: Axis.vertical,
                                       children: [

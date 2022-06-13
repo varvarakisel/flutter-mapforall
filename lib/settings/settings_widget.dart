@@ -37,6 +37,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                   children: [
                     Expanded(
                       child: Container(
+                        //TODO: android:hint
                         width: 100,
                         height: 100,
                         decoration: BoxDecoration(
@@ -92,11 +93,11 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                 borderColor: Colors.transparent,
                                 borderRadius: 30,
                                 borderWidth: 1,
-                                buttonSize: 40,
+                                buttonSize: 50,
                                 icon: Icon(
                                   Icons.close,
                                   color: FlutterFlowTheme.of(context)
-                                      .secondaryColor,
+                                      .primaryBtnText,
                                   size: 20,
                                 ),
                                 onPressed: () async {

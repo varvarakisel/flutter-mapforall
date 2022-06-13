@@ -83,6 +83,13 @@ abstract class FlutterFlowTheme {
         fontWeight: FontWeight.w600,
         fontSize: 14,
       );
+  TextStyle get bodyTextBackground => GoogleFonts.getFont(
+        'Poppins',
+        color: primaryColor,
+        backgroundColor: secondaryBackground,
+        fontWeight: FontWeight.w500,
+        fontSize: 16,
+      );
 }
 
 class LightModeTheme extends FlutterFlowTheme {
@@ -95,7 +102,7 @@ class LightModeTheme extends FlutterFlowTheme {
   Color primaryText = const Color(0xFFC7FFBB);
   Color secondaryText = const Color(0xFF082406);
 
-  Color primaryBtnText = Color(0xFFFFFFFF);
+  Color primaryBtnText = Color(0xFF082406);
   Color lineColor = Color(0xFFE0E3E7);
 }
 

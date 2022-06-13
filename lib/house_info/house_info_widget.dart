@@ -36,7 +36,7 @@ class _HouseInfoWidgetState extends State<HouseInfoWidget> {
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 5,
-                      color: Color(0xFF9D9C9C),
+                      color: FlutterFlowTheme.of(context).secondaryBackground,
                       offset: Offset(0, -1),
                       spreadRadius: 1,
                     )
@@ -51,47 +51,49 @@ class _HouseInfoWidgetState extends State<HouseInfoWidget> {
                 child: Stack(
                   children: [
                     Row(
-                      mainAxisSize: MainAxisSize.max,
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         Column(
-                          mainAxisSize: MainAxisSize.max,
                           children: [
-                            Align(
-                              alignment: AlignmentDirectional(0, 0),
-                              child: Row(
-                                mainAxisSize: MainAxisSize.max,
-                                children: [
-                                  Align(
-                                    alignment: AlignmentDirectional(0, 0),
-                                    child: Padding(
-                                      padding: EdgeInsetsDirectional.fromSTEB(
-                                          20, 5, 0, 0),
-                                      child: Text(
-                                        'adress'.tr,
-                                        style: FlutterFlowTheme.of(context)
-                                            .bodyText1
-                                            .override(
-                                              fontFamily: 'Poppins',
-                                              color:
-                                                  FlutterFlowTheme.of(context)
-                                                      .secondaryText,
-                                              fontSize: 26,
-                                              fontWeight: FontWeight.w600,
-                                            ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
                             Row(
-                              mainAxisSize: MainAxisSize.max,
-                              crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Padding(
                                   padding: EdgeInsetsDirectional.fromSTEB(
-                                      25, 5, 0, 0),
+                                      30, 10, 0, 0),
+                                  child: Text(
+                                    'adress'.tr,
+                                    style: FlutterFlowTheme.of(context)
+                                        .bodyText1
+                                        .override(
+                                          fontFamily: 'Poppins',
+                                          color: FlutterFlowTheme.of(context)
+                                              .secondaryText,
+                                          fontSize: 26,
+                                          fontWeight: FontWeight.w600,
+                                        ),
+                                  ),
+                                ),
+                                Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        90, 0, 0, 0),
+                                    child: IconButton(
+                                      onPressed: () async {
+                                        Navigator.pop(context);
+                                      },
+                                      icon: Icon(
+                                        Icons.close,
+                                        color: FlutterFlowTheme.of(context)
+                                            .primaryBtnText,
+                                        size: 20,
+                                      ),
+                                    ))
+                              ],
+                            ),
+                            Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Align(
+                                  alignment: Alignment(0, 0),
                                   child: Text(
                                     'residential'.tr,
                                     style: FlutterFlowTheme.of(context)
@@ -116,7 +118,6 @@ class _HouseInfoWidgetState extends State<HouseInfoWidget> {
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Row(
-                          mainAxisSize: MainAxisSize.max,
                           children: [
                             TextButton(
                               child: Text('info'.tr),
@@ -151,7 +152,6 @@ class _HouseInfoWidgetState extends State<HouseInfoWidget> {
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 110, 0, 0),
                         child: Row(
-                          mainAxisSize: MainAxisSize.min,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Expanded(
@@ -239,7 +239,11 @@ class _HouseInfoWidgetState extends State<HouseInfoWidget> {
                         crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           TextButton(
-                            child: Text('sendfeedback'.tr),
+                            child: Text(
+                              'sendfeedback'.tr,
+                              style: (FlutterFlowTheme.of(context)
+                                  .bodyTextBackground),
+                            ),
                             onPressed: () {
                               print('Button pressed ...');
                             },

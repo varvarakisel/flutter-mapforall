@@ -41,50 +41,42 @@ abstract class FlutterFlowTheme {
   Color primaryBtnText;
   Color lineColor;
 
-  TextStyle get title1 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get title1 => GoogleFonts.openSans(
         color: primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 24,
       );
-  TextStyle get title2 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get title2 => GoogleFonts.openSans(
         color: secondaryText,
         fontWeight: FontWeight.w600,
         fontSize: 22,
       );
-  TextStyle get title3 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get title3 => GoogleFonts.openSans(
         color: primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 20,
       );
-  TextStyle get subtitle1 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get subtitle1 => GoogleFonts.openSans(
         color: tertiaryColor,
         fontWeight: FontWeight.w600,
         fontSize: 16,
       );
-  TextStyle get subtitle2 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get subtitle2 => GoogleFonts.openSans(
         color: secondaryText,
         fontWeight: FontWeight.w600,
         fontSize: 16,
       );
-  TextStyle get bodyText1 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get bodyText1 => GoogleFonts.openSans(
         color: primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 14,
       );
-  TextStyle get bodyText2 => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get bodyText2 => GoogleFonts.openSans(
         color: secondaryText,
         fontWeight: FontWeight.w600,
         fontSize: 14,
       );
-  TextStyle get bodyTextBackground => GoogleFonts.getFont(
-        'Poppins',
+  TextStyle get bodyTextBackground => GoogleFonts.openSans(
         color: primaryColor,
         backgroundColor: secondaryBackground,
         fontWeight: FontWeight.w500,
@@ -132,8 +124,7 @@ extension TextStyleHelper on TextStyle {
     double lineHeight,
   }) =>
       useGoogleFonts
-          ? GoogleFonts.getFont(
-              fontFamily ?? this.fontFamily,
+          ? GoogleFonts.openSans(
               color: color ?? this.color,
               fontSize: fontSize ?? this.fontSize,
               fontWeight: fontWeight ?? this.fontWeight,

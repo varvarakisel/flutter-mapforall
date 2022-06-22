@@ -85,17 +85,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                   .primaryBackground,
                             ),
                             alignment: AlignmentDirectional(-1, 0),
-                            child: Text(
-                              'signin'.tr,
-                              style: FlutterFlowTheme.of(context)
-                                  .subtitle2
-                                  .override(
-                                    color: FlutterFlowTheme.of(context)
-                                        .secondaryText,
-                                    fontSize: 28,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                            ),
+                            child: Text('signin'.tr,
+                                style: FlutterFlowTheme.of(context).subtitle2),
                           ),
                         ),
                         Container(
@@ -127,17 +118,13 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       decoration: InputDecoration(
                         labelStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Poppins',
                                   color: Color(0xFF57636C),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.normal,
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Poppins',
                                   color: Color(0xFF57636C),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.normal,
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -162,10 +149,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).secondaryText,
                             fontSize: 14,
-                            fontWeight: FontWeight.normal,
                           ),
                     ),
                   ),
@@ -177,17 +162,13 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       decoration: InputDecoration(
                         labelStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Poppins',
                                   color: Color(0xFF57636C),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.normal,
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Poppins',
                                   color: Color(0xFF57636C),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.normal,
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -225,10 +206,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         ),
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).secondaryText,
                             fontSize: 14,
-                            fontWeight: FontWeight.normal,
                           ),
                     ),
                   ),
@@ -240,17 +219,13 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       decoration: InputDecoration(
                         labelStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Poppins',
                                   color: Color(0xFF57636C),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.normal,
                                 ),
                         hintStyle:
                             FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Poppins',
                                   color: Color(0xFF57636C),
                                   fontSize: 14,
-                                  fontWeight: FontWeight.normal,
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
@@ -289,10 +264,8 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         ),
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Poppins',
                             color: FlutterFlowTheme.of(context).secondaryText,
                             fontSize: 14,
-                            fontWeight: FontWeight.normal,
                           ),
                     ),
                   ),

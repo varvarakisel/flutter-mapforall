@@ -78,6 +78,7 @@ class _ThemeWidgetState extends State<ThemeWidget> {
                     ],
                   ),
                   Row(
+                    //device theme
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Padding(

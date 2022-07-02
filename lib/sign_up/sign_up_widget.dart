@@ -37,6 +37,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      resizeToAvoidBottomInset: false,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
         child: Column(
@@ -57,7 +58,7 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                         fit: BoxFit.cover,
                       ),
                       Text('Map For All',
-                          style: FlutterFlowTheme.of(context).title2),
+                          style: FlutterFlowTheme.of(context).title1),
                     ],
                   ),
                   Padding(
@@ -84,27 +85,33 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                               color: FlutterFlowTheme.of(context)
                                   .primaryBackground,
                             ),
-                            alignment: AlignmentDirectional(-1, 0),
+                            alignment: AlignmentDirectional(-0.7, 0.2),
                             child: Text('signin'.tr,
-                                style: FlutterFlowTheme.of(context).subtitle2),
+                                style: FlutterFlowTheme.of(context)
+                                    .subtitle1
+                                    .override(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                    )),
                           ),
                         ),
                         Container(
-                          width: 140,
+                          width: 200,
                           height: 50,
                           decoration: BoxDecoration(
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
                           ),
-                          alignment: AlignmentDirectional(-1, 0),
+                          alignment: AlignmentDirectional(0, 0),
                           child: Text(
                             'signup'.tr,
-                            style: FlutterFlowTheme.of(context).title2.override(
-                                  color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
-                                  fontSize: 28,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                            style:
+                                FlutterFlowTheme.of(context).subtitle1.override(
+                                      fontSize: 28,
+                                      fontWeight: FontWeight.bold,
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryBtnText,
+                                    ),
                           ),
                         ),
                       ],
@@ -116,40 +123,42 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                       controller: emailAddressController,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelStyle:
-                            FlutterFlowTheme.of(context).bodyText1.override(
-                                  color: Color(0xFF57636C),
-                                  fontSize: 14,
-                                ),
-                        hintStyle:
-                            FlutterFlowTheme.of(context).bodyText1.override(
-                                  color: Color(0xFF57636C),
-                                  fontSize: 14,
-                                ),
+                        labelStyle: FlutterFlowTheme.of(context)
+                            .subtitle1
+                            .override(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                              fontSize: 14,
+                            ),
+                        hintStyle: FlutterFlowTheme.of(context)
+                            .bodyText1
+                            .override(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                              fontSize: 14,
+                            ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context).secondaryColor,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
                         fillColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
+                            FlutterFlowTheme.of(context).primaryBackground,
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
                             fontSize: 14,
                           ),
                     ),
@@ -172,23 +181,23 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
                         fillColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
+                            FlutterFlowTheme.of(context).primaryBackground,
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
                         suffixIcon: InkWell(
@@ -200,13 +209,14 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             passwordVisibility
                                 ? Icons.visibility_outlined
                                 : Icons.visibility_off_outlined,
-                            color: Color(0xFF95A1AC),
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
                             size: 22,
                           ),
                         ),
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
                             fontSize: 14,
                           ),
                     ),
@@ -229,23 +239,23 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                                 ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
                         fillColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
+                            FlutterFlowTheme.of(context).primaryBackground,
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
                         suffixIcon: InkWell(
@@ -258,13 +268,14 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                             confirmPasswordVisibility
                                 ? Icons.visibility_outlined
                                 : Icons.visibility_off_outlined,
-                            color: Color(0xFF95A1AC),
+                            color: FlutterFlowTheme.of(context)
+                                .secondaryBackground,
                             size: 22,
                           ),
                         ),
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
                             fontSize: 14,
                           ),
                     ),
@@ -278,15 +289,29 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  TextButton(
-                    child: Text('signup'.tr),
+                  OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                        side: BorderSide.none,
+                        backgroundColor:
+                            FlutterFlowTheme.of(context).primaryColor),
+                    child: Text(
+                      'signingup'.tr,
+                      style: FlutterFlowTheme.of(context).bodyText2.override(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
+                          ),
+                    ),
                     onPressed: () async {
                       if (passwordController?.text !=
                           confirmPasswordController?.text) {
                         ScaffoldMessenger.of(context).showSnackBar(
                           SnackBar(
                             content: Text(
-                              'Passwords don\'t match!',
+                              'passwordmatch'.tr,
                             ),
                           ),
                         );
@@ -319,13 +344,19 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  TextButton(
+                  OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                        side: BorderSide.none,
+                        backgroundColor:
+                            FlutterFlowTheme.of(context).secondaryText),
                     child: Text(
-                      'signin'.tr,
+                      'asguest'.tr,
                       style: FlutterFlowTheme.of(context).subtitle2.override(
-                            color: FlutterFlowTheme.of(context).secondaryText,
-                            fontSize: 28,
-                            fontWeight: FontWeight.bold,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            fontSize: 16,
                           ),
                     ),
                     onPressed: () async {
@@ -356,10 +387,10 @@ class _SignUpWidgetState extends State<SignUpWidget> {
                     borderRadius: 30,
                     borderWidth: 1,
                     buttonSize: 50,
-                    fillColor: Color(0xFFDBE2E7),
+                    fillColor: FlutterFlowTheme.of(context).secondaryText,
                     icon: FaIcon(
                       FontAwesomeIcons.google,
-                      color: Color(0xFF57636C),
+                      color: FlutterFlowTheme.of(context).primaryBtnText,
                       size: 20,
                     ),
                     onPressed: () async {

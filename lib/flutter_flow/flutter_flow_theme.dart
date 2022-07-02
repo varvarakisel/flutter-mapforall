@@ -62,7 +62,7 @@ abstract class FlutterFlowTheme {
         fontSize: 16,
       );
   TextStyle get subtitle2 => GoogleFonts.openSans(
-        color: secondaryText,
+        color: primaryText,
         fontWeight: FontWeight.w600,
         fontSize: 16,
       );
@@ -85,31 +85,31 @@ abstract class FlutterFlowTheme {
 }
 
 class LightModeTheme extends FlutterFlowTheme {
-  Color primaryColor = const Color(0xFF579A4C);
-  Color secondaryColor = const Color(0xFFB7D6B2);
-  Color tertiaryColor = const Color(0xFF257567);
-  Color alternate = const Color(0xFFCA3737);
-  Color primaryBackground = const Color(0xFFF1F4F8);
-  Color secondaryBackground = const Color(0xFFFFFFFF);
-  Color primaryText = const Color(0xFFC7FFBB);
-  Color secondaryText = const Color(0xFF082406);
+  Color primaryColor = Color.fromARGB(255, 115, 255, 115);
+  Color secondaryColor = Color.fromRGBO(183, 214, 178, 1);
+  Color tertiaryColor = Color.fromARGB(255, 182, 243, 172);
+  Color alternate = Color.fromARGB(255, 212, 250, 199);
+  Color primaryBackground = Color.fromARGB(255, 248, 255, 246);
+  Color secondaryBackground = Color.fromARGB(255, 43, 47, 42);
+  Color primaryText = Color.fromRGBO(8, 36, 6, 1);
+  Color secondaryText = Color.fromARGB(255, 236, 241, 235);
 
   Color primaryBtnText = Color(0xFF082406);
-  Color lineColor = Color(0xFFE0E3E7);
+  Color lineColor = Color.fromARGB(255, 248, 255, 246);
 }
 
 class DarkModeTheme extends FlutterFlowTheme {
   Color primaryColor = const Color(0xFF257567);
   Color secondaryColor = const Color(0xFF2E4541);
-  Color tertiaryColor = const Color(0xFFBBD9D3);
-  Color alternate = const Color(0xFFCA3737);
+  Color tertiaryColor = Color.fromARGB(255, 18, 54, 48);
+  Color alternate = Color.fromARGB(255, 8, 23, 20);
   Color primaryBackground = const Color(0xFF1A1F24);
   Color secondaryBackground = const Color(0xFF101213);
   Color primaryText = const Color(0xFFCCDBD8);
   Color secondaryText = const Color(0xFFB0DFD6);
 
   Color primaryBtnText = Color(0xFFFFFFFF);
-  Color lineColor = Color(0xFF22282F);
+  Color lineColor = Color.fromARGB(255, 4, 1, 24);
 }
 
 extension TextStyleHelper on TextStyle {

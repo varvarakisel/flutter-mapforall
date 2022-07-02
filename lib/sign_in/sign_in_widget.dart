@@ -34,6 +34,7 @@ class _SignInWidgetState extends State<SignInWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
+      resizeToAvoidBottomInset: false,
       backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
       body: SafeArea(
         child: Column(
@@ -51,8 +52,10 @@ class _SignInWidgetState extends State<SignInWidget> {
                         'assets/images/jx7yx__.png',
                         width: 100,
                         height: 100,
-                        fit: BoxFit.fitWidth,
+                        fit: BoxFit.cover,
                       ),
+                      Text('Map For All',
+                          style: FlutterFlowTheme.of(context).title1),
                     ],
                   ),
                   Padding(
@@ -67,12 +70,12 @@ class _SignInWidgetState extends State<SignInWidget> {
                             color:
                                 FlutterFlowTheme.of(context).primaryBackground,
                           ),
-                          alignment: AlignmentDirectional(-1, 0),
+                          alignment: AlignmentDirectional(-0.7, 0.2),
                           child: Text(
                             'signin'.tr,
                             style: FlutterFlowTheme.of(context).title2.override(
                                   color: FlutterFlowTheme.of(context)
-                                      .secondaryText,
+                                      .primaryBtnText,
                                   fontSize: 28,
                                   fontWeight: FontWeight.bold,
                                 ),
@@ -91,15 +94,15 @@ class _SignInWidgetState extends State<SignInWidget> {
                             );
                           },
                           child: Container(
-                            width: 140,
+                            width: 200,
                             height: 50,
                             decoration: BoxDecoration(
                               color: FlutterFlowTheme.of(context)
                                   .primaryBackground,
                             ),
-                            alignment: AlignmentDirectional(-1, 0),
+                            alignment: AlignmentDirectional(0, 0),
                             child: Text(
-                              'signin'.tr,
+                              'signup'.tr,
                               style:
                                   FlutterFlowTheme.of(context).title2.override(
                                         color: FlutterFlowTheme.of(context)
@@ -119,47 +122,43 @@ class _SignInWidgetState extends State<SignInWidget> {
                       controller: emailAddressController,
                       obscureText: false,
                       decoration: InputDecoration(
-                        labelStyle:
-                            FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Lexend Deca',
-                                  color: Color(0xFF57636C),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                        hintStyle:
-                            FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Lexend Deca',
-                                  color: Color(0xFF57636C),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
+                        labelStyle: FlutterFlowTheme.of(context)
+                            .subtitle1
+                            .override(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                              fontSize: 14,
+                            ),
+                        hintStyle: FlutterFlowTheme.of(context)
+                            .bodyText1
+                            .override(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                              fontSize: 14,
+                            ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context).secondaryColor,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
                         fillColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
+                            FlutterFlowTheme.of(context).primaryBackground,
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Lexend Deca',
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
                             fontSize: 14,
-                            fontWeight: FontWeight.normal,
                           ),
                     ),
                   ),
@@ -169,39 +168,37 @@ class _SignInWidgetState extends State<SignInWidget> {
                       controller: passwordController,
                       obscureText: !passwordVisibility,
                       decoration: InputDecoration(
-                        labelStyle:
-                            FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Lexend Deca',
-                                  color: Color(0xFF57636C),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
-                        hintStyle:
-                            FlutterFlowTheme.of(context).bodyText1.override(
-                                  fontFamily: 'Lexend Deca',
-                                  color: Color(0xFF57636C),
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.normal,
-                                ),
+                        labelStyle: FlutterFlowTheme.of(context)
+                            .subtitle1
+                            .override(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                              fontSize: 14,
+                            ),
+                        hintStyle: FlutterFlowTheme.of(context)
+                            .bodyText1
+                            .override(
+                              color:
+                                  FlutterFlowTheme.of(context).primaryBtnText,
+                              fontSize: 14,
+                            ),
                         enabledBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(
-                            color:
-                                FlutterFlowTheme.of(context).primaryBackground,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
                             width: 2,
                           ),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         filled: true,
                         fillColor:
-                            FlutterFlowTheme.of(context).secondaryBackground,
+                            FlutterFlowTheme.of(context).primaryBackground,
                         contentPadding:
                             EdgeInsetsDirectional.fromSTEB(24, 24, 20, 24),
                         suffixIcon: InkWell(
@@ -213,16 +210,14 @@ class _SignInWidgetState extends State<SignInWidget> {
                             passwordVisibility
                                 ? Icons.visibility_outlined
                                 : Icons.visibility_off_outlined,
-                            color: Color(0xFF95A1AC),
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
                             size: 22,
                           ),
                         ),
                       ),
                       style: FlutterFlowTheme.of(context).bodyText1.override(
-                            fontFamily: 'Lexend Deca',
-                            color: FlutterFlowTheme.of(context).secondaryText,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
                             fontSize: 14,
-                            fontWeight: FontWeight.normal,
                           ),
                     ),
                   ),
@@ -235,8 +230,22 @@ class _SignInWidgetState extends State<SignInWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  TextButton(
-                    child: Text('asguest'.tr),
+                  OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                        side: BorderSide.none,
+                        backgroundColor:
+                            FlutterFlowTheme.of(context).alternate),
+                    child: Text(
+                      'signingin'.tr,
+                      style: FlutterFlowTheme.of(context).bodyText2.override(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: FlutterFlowTheme.of(context).primaryBtnText,
+                          ),
+                    ),
                     onPressed: () async {
                       final user = await signInWithEmail(
                         context,
@@ -255,13 +264,6 @@ class _SignInWidgetState extends State<SignInWidget> {
                         (r) => false,
                       );
                     },
-                    style: ButtonStyle(
-                      textStyle: MaterialStateProperty.all(
-                          FlutterFlowTheme.of(context).subtitle2.override(
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                              )),
-                    ),
                   ),
                 ],
               ),
@@ -271,8 +273,21 @@ class _SignInWidgetState extends State<SignInWidget> {
                 mainAxisSize: MainAxisSize.max,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  TextButton(
-                    child: Text('asguest'.tr),
+                  OutlinedButton(
+                    style: OutlinedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                        side: BorderSide.none,
+                        backgroundColor:
+                            FlutterFlowTheme.of(context).secondaryText),
+                    child: Text(
+                      'asguest'.tr,
+                      style: FlutterFlowTheme.of(context).subtitle2.override(
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            fontSize: 16,
+                          ),
+                    ),
                     onPressed: () async {
                       final user = await signInAnonymously(context);
                       if (user == null) {
@@ -286,47 +301,40 @@ class _SignInWidgetState extends State<SignInWidget> {
                         (r) => false,
                       );
                     },
-                    style: ButtonStyle(
-                      textStyle: MaterialStateProperty.all(
-                          FlutterFlowTheme.of(context).subtitle2.override(
-                                color:
-                                    FlutterFlowTheme.of(context).secondaryText,
-                              )),
-                    ),
                   ),
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(24, 24, 24, 24),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        FlutterFlowIconButton(
-                          borderColor: Colors.transparent,
-                          borderRadius: 30,
-                          borderWidth: 1,
-                          buttonSize: 50,
-                          fillColor: Color(0xFFDBE2E7),
-                          icon: FaIcon(
-                            FontAwesomeIcons.google,
-                            color: Color(0xFF57636C),
-                            size: 20,
-                          ),
-                          onPressed: () async {
-                            final user = await signInWithGoogle(context);
-                            if (user == null) {
-                              return;
-                            }
-                            await Navigator.pushAndRemoveUntil(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => HomePageWidget(),
-                              ),
-                              (r) => false,
-                            );
-                          },
-                        ),
-                      ],
+                ],
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(24, 24, 24, 24),
+              child: Row(
+                mainAxisSize: MainAxisSize.max,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  FlutterFlowIconButton(
+                    borderColor: Colors.transparent,
+                    borderRadius: 30,
+                    borderWidth: 1,
+                    buttonSize: 50,
+                    fillColor: FlutterFlowTheme.of(context).secondaryText,
+                    icon: FaIcon(
+                      FontAwesomeIcons.google,
+                      color: FlutterFlowTheme.of(context).primaryBtnText,
+                      size: 20,
                     ),
+                    onPressed: () async {
+                      final user = await signInWithGoogle(context);
+                      if (user == null) {
+                        return;
+                      }
+                      await Navigator.pushAndRemoveUntil(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => HomePageWidget(),
+                        ),
+                        (r) => false,
+                      );
+                    },
                   ),
                 ],
               ),

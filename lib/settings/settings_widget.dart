@@ -23,7 +23,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+      backgroundColor: FlutterFlowTheme.of(context).alternate,
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -41,15 +41,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                         width: 100,
                         height: 100,
                         decoration: BoxDecoration(
-                          gradient: LinearGradient(
-                            colors: [
-                              FlutterFlowTheme.of(context).primaryColor,
-                              FlutterFlowTheme.of(context).primaryBackground
-                            ],
-                            stops: [0, 1],
-                            begin: AlignmentDirectional(0, -1),
-                            end: AlignmentDirectional(0, 1),
-                          ),
+                          color: FlutterFlowTheme.of(context).alternate,
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(0),
                             bottomRight: Radius.circular(0),
@@ -64,7 +56,12 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                   EdgeInsetsDirectional.fromSTEB(125, 25, 0, 0),
                               child: Text(
                                 'profilename'.tr,
-                                style: FlutterFlowTheme.of(context).bodyText2,
+                                style: FlutterFlowTheme.of(context)
+                                    .subtitle2
+                                    .override(
+                                      color: FlutterFlowTheme.of(context)
+                                          .primaryText,
+                                    ),
                               ),
                             ),
                             Padding(
@@ -72,16 +69,21 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                                   EdgeInsetsDirectional.fromSTEB(125, 50, 0, 0),
                               child: Text(
                                 'editprofile'.tr,
-                                style: FlutterFlowTheme.of(context).bodyText1,
+                                style: FlutterFlowTheme.of(context)
+                                    .bodyText1
+                                    .override(
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryColor,
+                                    ),
                               ),
                             ),
                             Padding(
-                              padding:
-                                  EdgeInsetsDirectional.fromSTEB(10, 10, 0, 0),
+                              padding: EdgeInsetsDirectional.fromSTEB(
+                                  10, 10, 10, 10),
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(50),
                                 child: Image.network(
-                                    'https://memepedia.ru/wp-content/uploads/2019/11/nastja-shevchenko-4.jpg',
+                                    'https://cdn5.vectorstock.com/i/thumb-large/62/59/default-avatar-photo-placeholder-profile-icon-vector-21666259.jpg',
                                     width: 90,
                                     height: 100,
                                     fit: BoxFit.cover),
@@ -122,10 +124,10 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                         print('Button pressed ...');
                       },
                       label: Text('favorites'.tr,
-                          style: FlutterFlowTheme.of(context).subtitle1),
+                          style: FlutterFlowTheme.of(context).subtitle2),
                       icon: Icon(
                         Icons.favorite_outlined,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
+                        color: FlutterFlowTheme.of(context).primaryText,
                         size: 20,
                       ),
                     ),
@@ -151,11 +153,11 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                         );
                       },
                       label: Text('language'.tr,
-                          style: FlutterFlowTheme.of(context).subtitle1),
+                          style: FlutterFlowTheme.of(context).subtitle2),
                       icon: Icon(
                         Icons.language_sharp,
                         size: 20,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
+                        color: FlutterFlowTheme.of(context).primaryText,
                       ),
                     ),
                   ),
@@ -182,10 +184,10 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                         );
                       },
                       label: Text('theme'.tr,
-                          style: FlutterFlowTheme.of(context).subtitle1),
+                          style: FlutterFlowTheme.of(context).subtitle2),
                       icon: Icon(
                         Icons.lightbulb,
-                        color: FlutterFlowTheme.of(context).tertiaryColor,
+                        color: FlutterFlowTheme.of(context).primaryText,
                         size: 20,
                       ),
                     ),
@@ -197,7 +199,7 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                 thickness: 2,
                 indent: 100,
                 endIndent: 100,
-                color: Color(0xFF60735D),
+                color: FlutterFlowTheme.of(context).primaryText,
               ),
               Row(
                 mainAxisSize: MainAxisSize.max,
@@ -205,7 +207,9 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                 children: [
                   TextButton(
                     child: Text('sendfeedback'.tr,
-                        style: FlutterFlowTheme.of(context).bodyText2),
+                        style: FlutterFlowTheme.of(context).bodyText2.override(
+                              color: FlutterFlowTheme.of(context).primaryText,
+                            )),
                     onPressed: () {
                       print('Send Feedback Button pressed ...');
                     },
@@ -219,8 +223,8 @@ class _SettingsWidgetState extends State<SettingsWidget> {
                   decoration: BoxDecoration(
                     gradient: LinearGradient(
                       colors: [
-                        FlutterFlowTheme.of(context).primaryBackground,
-                        FlutterFlowTheme.of(context).primaryColor
+                        FlutterFlowTheme.of(context).alternate,
+                        FlutterFlowTheme.of(context).tertiaryColor
                       ],
                       stops: [0, 1],
                       begin: AlignmentDirectional(0, -1),
